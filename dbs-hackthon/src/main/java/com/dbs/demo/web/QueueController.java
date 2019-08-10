@@ -24,7 +24,7 @@ import com.dbs.demo.model.DbsQueue;
 @RequestMapping("/queue")
 public class QueueController {
 
-	@GetMapping
+	@GetMapping("/getQueueInfo")
     public ResponseEntity<List<DbsQueue>> getQueueInformation()
 	{
 		List<DbsQueue>  queueList=new ArrayList<DbsQueue>();
@@ -33,8 +33,8 @@ public class QueueController {
 		return new ResponseEntity<List<DbsQueue>>(queueList, new HttpHeaders(), HttpStatus.OK);
 	}
 	
-	@GetMapping
-	 public void AddingQueue()
+	@GetMapping("/creatingQueue")
+	 public void CreateQueue()
 		{
 			List<DbsQueue>  queueList=new ArrayList<DbsQueue>();
 			//List<EmployeeEntity> list = service.getAllEmployees();
@@ -42,8 +42,25 @@ public class QueueController {
 			
 		} 
 	
+	 @GetMapping("/addMessage")
+	 public void addMessage() {
+		 
+	 }
 	
-
+	 @GetMapping("/retrieveMessage")
+	public void retrieveMessage() {
+		 
+	 }
+	 
+	 @GetMapping("/isEmpty")
+	 public void isEmpty() {
+		 
+	 }
+	 
+	 @GetMapping("/isFull")
+	 public void isFull() {
+		 
+	 }
 	/*
 	 * @GetMapping("/{id}") public ResponseEntity<EmployeeEntity>
 	 * getEmployeeById(@PathVariable("id") Long id) throws RecordNotFoundException {
