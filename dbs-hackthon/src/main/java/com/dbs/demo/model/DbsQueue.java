@@ -27,6 +27,12 @@ public class DbsQueue {
 	
 	
 	
+	public DbsQueue(String queName, long queSize) {
+		// TODO Auto-generated constructor stub
+		this.queueName=queName;
+		this.queueSize=queSize;
+	}
+
 	public long getQueueSize() {
 		return queueSize;
 	}
