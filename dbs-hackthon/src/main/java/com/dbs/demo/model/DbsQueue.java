@@ -13,6 +13,19 @@ public class DbsQueue {
 	private int queueId;
 	
 	private String queueName;
+	
+	private long queueSize;
+
+	
+	
+	
+	public long getQueueSize() {
+		return queueSize;
+	}
+
+	public void setQueueSize(long queueSize) {
+		this.queueSize = queueSize;
+	}
 
 	public String getQueueName() {
 		return queueName;
